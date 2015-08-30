@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="app_name">Project</string>
+
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_lista_de_voos">Lista De Voos</string>
+    <string name="estados_origem">Origem</string>
+    <string name="estados_destino">Destino</string>
+    <string name="bt_pesquisar">Pesquisar</string>
+    <string name="origem">Origem</string>
+    <string name="destino">Destino</string>
+    <string name="listarVoo">Escolher Voo</string>
+
+    <string-array name="estados">
+
+        <item>Acre</item>
+        <item>Alagoas</item>
+        <item>Amazonas</item>
+        <item>Bahia</item>
+        <item>Ceará</item>
+        <item>Distrito Federal</item>
+        <item>Espiríto Santo</item>
+        <item>Goiás</item>
+        <item>Maranhão</item>
+        <item>Mato Grosso</item>
+        <item>Mato Grosso do Sul</item>
+        <item>Minas Gerais</item>
+        <item>Pará</item>
+        <item>Paraíba</item>
+        <item>Paraná</item>
+        <item>Pernambuco</item>
+        <item>Piauí</item>
+        <item>Rio de Janeiro</item>
+        <item>Rio Grande do Norte</item>
+        <item>Rio Grande do Sul</item>
+        <item>Randônia</item>
+        <item>Rorainda</item>
+        <item>Santa Catarina</item>
+        <item>São Paulo</item>
+        <item>Sergipe</item>
+        <item>Tocantins</item>
+
+    </string-array>
+</resources>

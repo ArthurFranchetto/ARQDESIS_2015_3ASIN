@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/listarVoo"
+        android:gravity="center_horizontal"
+        android:textSize="44dp"
+        android:paddingBottom="16dip"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:text="@string/origem"
+        />
+    <Spinner
+        android:id="@+id/lista_estados"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/estados"
+        android:prompt="@string/estados_origem"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:text="@string/destino"
+        />
+    <Spinner
+        android:id="@+id/lista_estados2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/estados"
+        android:prompt="@string/estados_origem"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_pesquisar"
+        android:text="@string/bt_pesquisar"
+        android:onClick="startListaDeVoos"
+        />
+
+</LinearLayout>
