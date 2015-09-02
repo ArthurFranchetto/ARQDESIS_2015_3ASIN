@@ -4,14 +4,28 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.content.Intent;import android.app.ListActivity;
 import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
 
-public class ListaDeVoos extends AppCompatActivity {
+
+public class ListaDeVoos extends ListActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lista_de_voos);
+        //setContentView(R.layout.activity_lista_de_voos);
+        // storing string resources into Array
+        String[] disponiveis = getResources().getStringArray(R.array.voosDisponiveis);
+
+        // Binding resources Array to ListAdapter
+        this.setListAdapter(new ArrayAdapter<String>(this, R.layout.list_item, R.id.label, disponiveis));
     }
 
     @Override

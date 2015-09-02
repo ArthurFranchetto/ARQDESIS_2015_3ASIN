@@ -3,6 +3,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="@color/dark_blue"
     android:orientation="vertical" >
 
     <TextView android:layout_width="match_parent"
@@ -21,10 +22,10 @@
         />
     <Spinner
         android:id="@+id/lista_estados"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:entries="@array/estados"
         android:prompt="@string/estados_origem"
+        android:background="@drawable/spinnerlayout"
         />
     <TextView
         android:layout_width="match_parent"
@@ -34,10 +35,11 @@
         />
     <Spinner
         android:id="@+id/lista_estados2"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:entries="@array/estados"
         android:prompt="@string/estados_origem"
+        android:background="@drawable/spinnerlayout"
+
         />
 
     <Button
