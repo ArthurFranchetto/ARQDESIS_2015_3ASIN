@@ -20,9 +20,15 @@ public class ListaDeVoos extends ListActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_lista_de_voos);
-        // storing string resources into Array
-        String[] disponiveis = getResources().getStringArray(R.array.voosDisponiveis);
+        Intent intent = getIntent();
+        String origem = intent.getStringExtra(ListarVoo.ORIGEM);
+        String destino = intent.getStringExtra(ListarVoo.DESTINO);
+        String[] disponiveis;
+        if(origem.equals("São Paulo")) {
+            disponiveis = getResources().getStringArray(R.array.SPRJ);}
+            else{
+                disponiveis = getResources().getStringArray(R.array.RJSP);
+            }
 
         // Binding resources Array to ListAdapter
         this.setListAdapter(new ArrayAdapter<String>(this, R.layout.list_item, R.id.label, disponiveis));

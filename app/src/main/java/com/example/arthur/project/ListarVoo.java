@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
@@ -14,37 +15,63 @@ import android.widget.TextView;
 
 public class ListarVoo extends AppCompatActivity {
 
-    private Spinner spinner, spinner2;
+    Spinner spinnerOrigem, spinnerDestino;
+    String destino, origem;
+    Button btnConsultar;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listar_voo);
-         spinner = (Spinner) findViewById(R.id.lista_estados);
-         spinner2 = (Spinner) findViewById(R.id.lista_estados2);
-
-        // Create an ArrayAdapter using the string array and a default spinner layout
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.estados, android.R.layout.simple_spinner_item);
-        ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(this,
-                R.array.estados, android.R.layout.simple_spinner_item);
-        // Specify the layout to use when the list of choices appears
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        // Apply the adapter to the spinner
-        spinner.setAdapter(adapter);
-        spinner2.setAdapter(adapter);
-
-        addListenerOnSpinnerItemSelection();
+        setupViews();
     }
 
-    public void addListenerOnSpinnerItemSelection() {
-        spinner = (Spinner) findViewById(R.id.lista_estados);
-        spinner.setOnItemSelectedListener(new EstadoSelecionado());
-        spinner2 = (Spinner) findViewById(R.id.lista_estados2);
-        spinner2.setOnItemSelectedListener(new EstadoSelecionado());
+    private void setupViews(){
+        destino = "";
+        origem = "";
+        btnConsultar = (Button) findViewById(R.id.btn_pesquisar);
+        spinnerOrigem =(Spinner) findViewById(R.id.lista_estados);
+        spinnerOrigem.setOnItemSelectedListener(new OrigemSelecionada());
+        spinnerDestino =(Spinner) findViewById(R.id.lista_estados2);
+        spinnerDestino.setOnItemSelectedListener(new DestinoSelecionado());
     }
+
+    private class OrigemSelecionada implements AdapterView.OnItemSelectedListener{
+        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+            origem = (String) parent.getItemAtPosition(position);
+        }
+
+        public void onNothingSelected(AdapterView<?> parent){
+
+        }
+    }
+
+    private class DestinoSelecionado implements AdapterView.OnItemSelectedListener{
+        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+            destino = (String) parent.getItemAtPosition(position);
+        }
+
+        public void onNothingSelected(AdapterView<?> parent){
+
+        }
+    }
+    public final static String ORIGEM = "com.example.arthur.ORIGEM";
+    public final static String DESTINO = "com.example.arthur.DESTINO";
+
+    public void startListaDeVoos(View view)
+    {
+        String pOrigem = this.origem.equals("Escolha a origem")?"":origem;
+        String pDestino = this.destino.equals("Escolha o destino")?"":destino;
+
+        Intent intent = new Intent (this, ListaDeVoos.class);
+        intent.putExtra(ORIGEM, pOrigem);
+        intent.putExtra(DESTINO, pDestino);
+        startActivity(intent);
+    }
+
+
 
     protected void onStart() {
 
@@ -74,11 +101,6 @@ public class ListarVoo extends AppCompatActivity {
     protected void onDestroy()
     {
         super.onDestroy();
-    }
-
-    public void startListaDeVoos(View v){
-        Intent intent = new Intent(this, ListaDeVoos.class);
-        startActivity(intent);
     }
 
     public void finishListarVoo(View v)

@@ -16,12 +16,16 @@
     <string name="estado2"></string>
 
 
-    <string-array name="voosDisponiveis">
+    <string-array name="SPRJ">
         <item>São Paulo - Rio de Janeiro - 17:00</item>
         <item>São Paulo - Rio de Janeiro - 18:00</item>
         <item>São Paulo - Rio de Janeiro - 20:00</item>
-        <item>São Paulo - Rio de Janeiro - 22:00</item>
-        <item>São Paulo - Rio de Janeiro - 23:00</item>
+    </string-array>
+
+    <string-array name="RJSP">
+        <item>Rio de Janeiro - São Paulo - 17:00</item>
+        <item>Rio de Janeiro - São Paulo - 18:00</item>
+        <item>Rio de Janeiro - São Paulo - 20:00</item>
     </string-array>
 
 
