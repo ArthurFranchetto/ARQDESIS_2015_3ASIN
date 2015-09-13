@@ -14,6 +14,11 @@
     <string name="listarVoo">Escolher Voo</string>
     <string name="estado1"></string>
     <string name="estado2"></string>
+    <string name="label_voo_nome">Escolha suas opções</string>
+    <string name="label_voo_preco">Preço: </string>
+    <string name="label_data">Data: </string>
+    <string name="label_hora">Hora: </string>
+
 
 
     <string-array name="SPRJ">
@@ -27,6 +32,34 @@
         <item>Rio de Janeiro - São Paulo - 18:00</item>
         <item>Rio de Janeiro - São Paulo - 20:00</item>
     </string-array>
+
+    <string-array name="SPAM">
+        <item>São Paulo - Amazonas - 17:00</item>
+        <item>São Paulo - Amazonas - 18:00</item>
+        <item>São Paulo - Amazonas - 20:00</item>
+    </string-array>
+
+    <string-array name="RJAM">
+        <item>Rio de Janeiro - Amazonas - 17:00</item>
+        <item>Rio de Janeiro - Amazonas - 18:00</item>
+        <item>Rio de Janeiro - Amazonas - 20:00</item>
+    </string-array>
+
+    <string-array name="AMSP">
+        <item>Amazonas - São Paulo - 17:00</item>
+        <item>Amazonas - São Paulo - 18:00</item>
+        <item>Amazonas - São Paulo - 20:00</item>
+    </string-array>
+
+    <string-array name="AMRJ">
+        <item>Amazonas - Rio de Janeiro - 17:00</item>
+        <item>Amazonas - Rio de Janeiro - 18:00</item>
+        <item>Amazonas - Rio de Janeiro - 20:00</item>
+    </string-array>
+    <string name="title_activity_detalhe_voo">DetalheVooActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+
 
 
 </resources>

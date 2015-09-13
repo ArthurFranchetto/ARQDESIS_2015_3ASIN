@@ -20,7 +20,10 @@
             android:name=".ListaDeVoos"
             android:label="@string/title_activity_lista_de_voos" >
         </activity>
-
+        <activity
+            android:name=".DetalheVooActivity"
+            android:label="@string/title_activity_detalhe_voo" >
+        </activity>
     </application>
 
 </manifest>

@@ -6,12 +6,13 @@
     android:background="@color/dark_blue"
     android:orientation="vertical" >
 
-    <TextView
+    <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="24dp"
+        android:id="@+id/view_lista_voo"
+        android:fastScrollEnabled="true">
 
-        />
+    </ListView>
 
 
 </LinearLayout>

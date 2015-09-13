@@ -5,8 +5,8 @@
         <item>Escolha a origem</item>
         <item>São Paulo</item>
         <item>Rio de Janeiro</item>
-        <!-- <item>Amazonas</item>
-         <item>Bahia</item>
+        <item>Amazonas</item>
+        <!--  <item>Bahia</item>
          <item>Ceará</item>
          <item>Distrito Federal</item>
          <item>Espiríto Santo</item>
@@ -35,8 +35,8 @@
         <item>Escolha o destino</item>
         <item>São Paulo</item>
         <item>Rio de Janeiro</item>
-        <!-- <item>Amazonas</item>
-         <item>Bahia</item>
+        <item>Amazonas</item>
+        <!--  <item>Bahia</item>
          <item>Ceará</item>
          <item>Distrito Federal</item>
          <item>Espiríto Santo</item>

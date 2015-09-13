@@ -20,7 +20,6 @@ public class ListarVoo extends AppCompatActivity {
     Button btnConsultar;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,6 +56,7 @@ public class ListarVoo extends AppCompatActivity {
 
         }
     }
+
     public final static String ORIGEM = "com.example.arthur.ORIGEM";
     public final static String DESTINO = "com.example.arthur.DESTINO";
 
