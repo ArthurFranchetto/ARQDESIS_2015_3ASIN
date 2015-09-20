@@ -1,4 +1,4 @@
-package com.example.arthur.project;
+package com.example.arthur.project.model;
 
 /**
  * Created by Arthur on 13/09/2015.

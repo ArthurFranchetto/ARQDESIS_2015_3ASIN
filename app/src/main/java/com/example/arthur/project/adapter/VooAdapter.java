@@ -1,4 +1,4 @@
-package com.example.arthur.project;
+package com.example.arthur.project.adapter;
 
 import android.app.Activity;
 import android.content.Context;
@@ -11,10 +11,13 @@ import android.widget.ImageView;
 import android.widget.SectionIndexer;
 import android.widget.TextView;
 
-import java.text.NumberFormat;
+import com.example.arthur.project.R;
+import com.example.arthur.project.util.Util;
+import com.example.arthur.project.util.ViewHolder;
+import com.example.arthur.project.model.Voo;
+
 import java.text.SimpleDateFormat;
 import java.util.Hashtable;
-import java.util.Locale;
 
 /**
  * Created by Arthur on 13/09/2015.

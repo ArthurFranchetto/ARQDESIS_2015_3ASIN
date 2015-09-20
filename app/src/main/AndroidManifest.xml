@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".ListarVoo"
+            android:name=".controller.ListarVoo"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,11 +17,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ListaDeVoos"
+            android:name=".controller.ListaDeVoos"
             android:label="@string/title_activity_lista_de_voos" >
         </activity>
         <activity
-            android:name=".DetalheVooActivity"
+            android:name=".controller.DetalheVooActivity"
             android:label="@string/title_activity_detalhe_voo" >
         </activity>
     </application>

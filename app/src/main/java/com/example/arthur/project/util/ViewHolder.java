@@ -1,4 +1,4 @@
-package com.example.arthur.project; /**
+package com.example.arthur.project.util; /**
  * Created by Arthur on 13/09/2015.
  */
 import android.widget.ImageView;

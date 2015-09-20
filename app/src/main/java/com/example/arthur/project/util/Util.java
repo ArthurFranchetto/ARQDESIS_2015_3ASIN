@@ -1,10 +1,12 @@
-package com.example.arthur.project;
+package com.example.arthur.project.util;
 
 /**
  * Created by Arthur on 13/09/2015.
  */
 import android.app.Activity;
 import android.graphics.drawable.Drawable;
+
+import com.example.arthur.project.R;
 
 import java.lang.reflect.Field;
 

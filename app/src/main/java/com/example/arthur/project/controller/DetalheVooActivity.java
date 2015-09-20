@@ -1,13 +1,15 @@
-package com.example.arthur.project;
+package com.example.arthur.project.controller;
 
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.arthur.project.R;
+import com.example.arthur.project.util.Util;
+import com.example.arthur.project.model.Voo;
 
 import java.io.Serializable;
 import java.text.NumberFormat;

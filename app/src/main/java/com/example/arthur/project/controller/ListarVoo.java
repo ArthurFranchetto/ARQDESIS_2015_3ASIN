@@ -1,23 +1,26 @@
-package com.example.arthur.project;
+package com.example.arthur.project.controller;
 
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
-import android.widget.TextView;
+
+import com.example.arthur.project.R;
+import com.example.arthur.project.model.Voo;
+
+import java.util.ArrayList;
 
 public class ListarVoo extends AppCompatActivity {
 
     Spinner spinnerOrigem, spinnerDestino;
     String destino, origem;
     Button btnConsultar;
+    ArrayList<Voo> voos;
+//    final String servidor =
 
 
     @Override
