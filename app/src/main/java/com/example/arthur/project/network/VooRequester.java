@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.ConnectivityManager;
 
+import com.example.arthur.project.model.Voo;
 import com.squareup.okhttp.FormEncodingBuilder;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
@@ -19,6 +20,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.text.NumberFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Locale;
 
 /**
@@ -28,15 +30,14 @@ public class VooRequester {
 
     OkHttpClient client = new OkHttpClient();
 
-    public ArrayList<Cerveja> get(String url, String pEstilo, String pCor, String pPais) throws IOException {
+    public ArrayList<Voo> get(String url, String pOrigem,String pDestino) throws IOException {
 
-        ArrayList<Cerveja> lista = new ArrayList<>();
+        ArrayList<Voo> lista = new ArrayList<>();
 
         //acentuacao nao funciona se mandar via get, mesmo usando URLEncode.encode(String,UTF-8)
         RequestBody formBody = new FormEncodingBuilder()
-                .add("estilo", pEstilo)
-                .add("cor", pCor)
-                .add("pais", pPais)
+                .add("origem", pOrigem)
+                .add("destino", pDestino)
                 .build();
         Request request = new Request.Builder()
                 .url(url)
@@ -55,22 +56,25 @@ public class VooRequester {
             for (int i = 0; i < root.length(); i++ ) {
                 item = (JSONObject)root.get(i);
 
-                String nome = item.getString("nome");
+                int cv = item.getInt("codVoo");
+                String origem = item.getString("origem");
+                String destino = item.getString("destino");
+                double valor = item.getDouble("valor");
+                Date data = item.getDate("data");
+                String hora = item.getString("hora");
+                String situacao = item.getString("situacao");
+                int escala = item.getInt("escala");
+                int ca = item.getInt("codAeronave");
                 String imagem = item.getString("imagem");
-                double preco = item.getDouble("preco");
-                String estilo = item.getString("estilo");
-                String cor = item.getString("cor");
-                String pais = item.getString("pais");
 
-                lista.add(new Cerveja(nome, estilo, cor, pais, imagem, preco));
+                lista.add(new Voo(cv,origem, destino, valor, data, hora, situacao, escala, ca, imagem));
             }
         } catch(JSONException e){
             e.printStackTrace();
         }
         finally {
             if(lista.size() == 0)
-                lista.add(new Cerveja(Cerveja.NAO_ENCONTRADA, pEstilo, pCor, pPais, "garrafa_vazia", 0.0));
-            //Log.v("CervejaRequester", jsonStr);
+                lista.add(new Voo());
         }
         return lista;
     }

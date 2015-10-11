@@ -63,6 +63,8 @@ public class ListarVoo extends AppCompatActivity {
     public final static String ORIGEM = "com.example.arthur.ORIGEM";
     public final static String DESTINO = "com.example.arthur.DESTINO";
 
+    public final static String VOOS = "com.example.arthur.Voo";
+
     public void startListaDeVoos(View view)
     {
         String pOrigem = this.origem.equals("Escolha a origem")?"":origem;

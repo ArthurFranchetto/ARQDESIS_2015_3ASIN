@@ -10,7 +10,7 @@ import java.util.TreeSet;
  * Created by Arthur on 20/09/2015.
  */
 public class SectionIndexBuilder {
-    //cria um array de cabecalhos unicos de secao; os dados devem estar ordenados por nome
+
     public static Object[] BuildSectionHeaders(Voo[] voos)
     {
         ArrayList<String> results = new ArrayList<>();

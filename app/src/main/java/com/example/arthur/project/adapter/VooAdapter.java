@@ -33,6 +33,9 @@ public class VooAdapter extends BaseAdapter implements SectionIndexer
     public VooAdapter(Activity context, Voo[] voos){
         this.context = context;
         this.voos = voos;
+        sectionHeaders = SectionIndexBuilder.BuildSectionHeaders(voos);
+        positionForSectionMap = SectionIndexBuilder.BuildPositionForSectionMap(voos);
+        sectionForPositionMap = SectionIndexBuilder.BuildSectionForPositionMap(voos);
     }
     @Override
     public int getCount() {

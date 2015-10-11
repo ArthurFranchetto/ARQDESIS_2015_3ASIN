@@ -11,6 +11,7 @@ public class Voo implements Comparable<Voo>, Serializable {
     private int codVoo, codAeronave, escala;
     private double valor;
     private Date data;
+    public static final String NAO_ENCONTRADO = "Não encontrado.";
 
 
     public Voo()
@@ -128,10 +129,21 @@ public class Voo implements Comparable<Voo>, Serializable {
 
 
 
-    public String toString()
-    {
-        return ("Nº Voo: " + codVoo + " - Data: " + data + " - Hora: "+ hora + " - Valor: " + valor);
+    public String toString(){
+        return "com.example.arthur.project.Voo{" +
+                "codVoo='" + codVoo + '\'' +
+                ", imagem='" + imagem + '\'' +
+                ", origem='" + origem + '\'' +
+                ", destino='" + destino + '\'' +
+                ", valor='" + valor + '\'' +
+                ", data='" + data + '\'' +
+                ", hora='" + hora + '\'' +
+                ", situacao='" + situacao + '\'' +
+                ", escala='" + escala + '\'' +
+                ", codAeronave='" + codAeronave + '\'' +
+                '}';
     }
+
 
     public int compareTo(Voo voo) {
         if (codVoo == (getCodVoo())

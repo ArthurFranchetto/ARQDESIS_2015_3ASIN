@@ -20,7 +20,7 @@ import java.util.ArrayList;
 public class ListaDeVoos extends ListActivity {
     ListView listView;
     Activity atividade;
-    public final static String CERVEJA = "br.usjt.CERVEJA";
+    public final static String VOO = "com.example.arthur.Voo";
     Voo[] voos;
 
     @Override
