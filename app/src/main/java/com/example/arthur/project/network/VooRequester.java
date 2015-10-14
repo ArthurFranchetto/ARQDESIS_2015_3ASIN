@@ -18,10 +18,13 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.text.DateFormat;
 import java.text.NumberFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Locale;
+import java.text.ParseException;
 
 /**
  * Created by Arthur on 20/09/2015.
@@ -60,12 +63,19 @@ public class VooRequester {
                 String origem = item.getString("origem");
                 String destino = item.getString("destino");
                 double valor = item.getDouble("valor");
-                Date data = item.getDate("data");
+                String sdata = item.getString("data");
                 String hora = item.getString("hora");
                 String situacao = item.getString("situacao");
                 int escala = item.getInt("escala");
                 int ca = item.getInt("codAeronave");
                 String imagem = item.getString("imagem");
+                DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+                Date data = null;
+                try {
+                    data = (Date)formatter.parse(sdata);
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
 
                 lista.add(new Voo(cv,origem, destino, valor, data, hora, situacao, escala, ca, imagem));
             }
