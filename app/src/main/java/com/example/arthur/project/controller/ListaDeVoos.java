@@ -31,7 +31,7 @@ public class ListaDeVoos extends ListActivity {
 
         //pega a mensagem do intent
         Intent intent = getIntent();
-        //voos = ((ArrayList<Voo>)intent.getSerializableExtra(ListarVoo.VOO)).toArray(new Voo[][0]);
+        voos = ((ArrayList<Voo>)intent.getSerializableExtra(ListarVoo.VOOS)).toArray(new Voo[0]);
 
         //cria o listview de cervejas
         listView = (ListView) findViewById(R.id.view_lista_voo);
@@ -49,10 +49,10 @@ public class ListaDeVoos extends ListActivity {
                                     int position, long id) {
 
                 // manda para a tela de detalhe
-      //          Intent intent = new Intent(atividade, DetalheCervejaActivity.class);
-        //        intent.putExtra(CERVEJA, cervejas[position]);
+                Intent intent = new Intent(atividade, DetalheVooActivity.class);
+                intent.putExtra(VOO, voos[position]);
 
-          //      startActivity(intent);
+                startActivity(intent);
 
             }
 
